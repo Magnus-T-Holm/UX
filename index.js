@@ -1,20 +1,27 @@
-document.querySelector("#search_input").addEventListener('input', filterList);
-document.querySelector("#category").addEventListener('change', filterList);
+$(document).ready(function () {
+    document.querySelector("#search_input").addEventListener('input', filterList);
+    document.querySelector("#category").addEventListener('change', filterList);
 
-function filterList() {
-    const seachInput = document.querySelector("#search_input");
-    const category = document.querySelector("#category");
-    const filter = seachInput.value.toLowerCase();
-    const listItems = document.querySelectorAll('li');
-    listItems.forEach((shop) => {
-        console.log(shop.dataset.tag);
-        console.log(category.value);
+    document.querySelector("#advanced_search_button").addEventListener('click', toggleAdvancedSearch);
 
-        let text = shop.textContent;
-        if ((text.toLowerCase().includes(filter.toLowerCase()) && !category.value) || (text.toLowerCase().includes(filter.toLowerCase()) && shop.dataset.tag.includes(category.value)) || (!filter && shop.dataset.tag.includes(category.value))) {
-            shop.style.display = "";
+    function filterList() {
+        let hidden_stores = 0;
+        $("li").each(function () {
+            if (($(this).text().toLowerCase().includes($("#search_input").val().toLowerCase()) && !$("#category").val()) || ($(this).text().toLowerCase().includes($("#search_input").val().toLowerCase()) && $(this).data("tag").includes($("#category").val())) || (!$("#search_input").val() && $(this).data("tag").includes($("#category").val()))) {
+                $(this).css("display", "");
+            } else {
+                $(this).css("display", "none");
+                hidden_stores++
+            }
+        })
+        if (hidden_stores == $("li").length) {
+            $("#no_results").css("display", "block");
         } else {
-            shop.style.display = "none";
+            $("#no_results").css("display", "")
         }
-    })
-}
+    }
+
+    function toggleAdvancedSearch() {
+        $("#advanced_search").toggle();
+    }
+})

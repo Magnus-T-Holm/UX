@@ -5,67 +5,145 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/2ca87244a7.js" crossorigin="anonymous"></script>
+    <script src="jquery-3.6.3.min.js"></script>
+    <script src="index.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 
 <body>
-    <form action="">
-        <input type="search" name="" id="search_input">
-        <select name="" id="category">
-            <option value=""></option>
-            <option value="blomster">Blomster</option>
-            <option value="byggemarked">Byggemarked</option>
-            <option value="dagligvarer">Dagligvarer</option>
-            <option value="dyr">Alt til dyr</option>
-            <option value="hobby">Hobby</option>
-            <option value="hotel_overnatning">Hotel & overnatning</option>
-            <option value="kaffe_chokolade">Kaffe & chokolade</option>
-            <option value="lingeri">Lingeri</option>
-            <option value="medicin_alternativ">Medicin & alternativ behandling</option>
-            <option value="oplevelser">Oplevelser</option>
-            <option value="sport_fritid">Sport & fritid</option>
-            <option value="skønhed_frisør_wellness">Skønhed, frisør & wellness</option>
-            <option value="sko_tasker">Sko & tasker</option>
-            <option value="smykker_ure">Smykker & ure</option>
-            <option value="tøj">Tøj</option>
-            <option value="vin_delikatesse">Vin delikatesse</option>
-            <option value="økonomi_bolig">Økonomi, bolig & rådgivning</option>
-        </select>
-        <ul>
-            <li id="1" data-tag="hobby"><a href="#">1001 ting</a></li>
-            <li id="30" data-tag="dagligvarer"><a href="#">365 Discount</a></li>
-            <li id="14" data-tag="blomster"><a href="#">BUCKETBLOOM</a></li>
-            <li id="9" data-tag="kaffe_chokolade"><a href="#">BUTIK LIFE</a></li>
-            <li id="2" data-tag="byggemarked"><a href="#">BYGMA</a></li>
-            <li id="10" data-tag="kaffe_chokolade"><a href="#">FRELLSEN CHOKOLADE</a></li>
-            <li id="25" data-tag="vin_delikatesse"><a href="#">HOLTE VINLAGER</a></li>
-            <li id="27" data-tag="lingeri"><a href="#">HUNKEMÖLLER</a></li>
-            <li id="16" data-tag="sport_fritid"><a href="#">INTERSPORT SEIFFERT</a></li>
-            <li id="24" data-tag="tøj"><a href="#">KINGS & QUEENS</a></li>
-            <li id="7" data-tag="kaffe_chokolade"><a href="#">KJÆRSTRUP KØGE</a></li>
-            <li id="6" data-tag="medicin_alternativ"><a href="#">KØGE APOTEK</a></li>
-            <li id="4" data-tag="dyr"><a href="#">Køge Dyreklinik</a></li>
-            <li id="8" data-tag="kaffe_chokolade"><a href="#">KØGE KAFFERISTERI</a></li>
-            <li id="23" data-tag="oplevelser"><a href="#">KØGE KIRKE</a></li>
-            <li id="15" data-tag="sport_fritid"><a href="#">KØGES KOST KONCEPT</a></li>
-            <li id="21" data-tag="hotel_overnatning"><a href="#">KØGE & VALLØ CAMPING</a></li>
-            <li id="11" data-tag="tøj"><a href="#">NOA NOA</a></li>
-            <li id="22" data-tag="oplevelser"><a href="#">NORDISK FILM</a></li>
-            <li id="18" data-tag="økonomi_bolig"><a href="#">NYBOLIG KØGE</a></li>
-            <li id="13" data-tag="tøj"><a href="#">ONLY</a></li>
-            <li id="28" data-tag="smykker_ure"><a href="#">PILGRIM</a></li>
-            <li id="29" data-tag="smykker_ure"><a href="#">POMPUS</a></li>
-            <li id="5" data-tag="medicin_alternativ"><a href="#">ROSMEDIC</a></li>
-            <li id="20" data-tag="sko_tasker"><a href="#">SKECHERS</a></li>
-            <li id="17" data-tag="økonomi_bolig"><a href="#">SPAREKASSEN KRONJYLLAND</a></li>
-            <li id="12" data-tag="tøj"><a href="#">VILA</a></li>
-            <li id="26" data-tag="vin_delikatesse"><a href="#">VIN-O</a></li>
-            <li id="3" data-tag="byggemarked"><a href="#">XL-BYG CF</a></li>
-            <li id="19" data-tag="skønhed_frisør_wellness"><a href="#">YOUR WELLNESS</a></li>
-        </ul>
-    </form>
-    <script src="index.js"></script>
+    <header>
+        <img src="ffffff&text=Køge+torv+logo.webp" alt="Logo">
+    </header>
+    <main>
+        <form action="">
+            <div id="search_inputs">
+                <label for="search_input">Søg på butik navn</label>
+                <input type="search" name="search_input" id="search_input">
+                <i id="search_icon" class="fa-solid fa-magnifying-glass"></i>
+                <div id="advanced_search">
+                    <label for="category">Butik kategori</label>
+                    <select name="category" id="category">
+                        <option value=""></option>
+                        <option value="blomster">Blomster</option>
+                        <option value="byggemarked">Byggemarked</option>
+                        <option value="dagligvarer">Dagligvarer</option>
+                        <option value="dyr">Alt til dyr</option>
+                        <option value="hobby">Hobby</option>
+                        <option value="hotel_overnatning">Hotel & overnatning</option>
+                        <option value="kaffe_chokolade">Kaffe & chokolade</option>
+                        <option value="lingeri">Lingeri</option>
+                        <option value="medicin_alternativ">Medicin & alternativ behandling</option>
+                        <option value="oplevelser">Oplevelser</option>
+                        <option value="sport_fritid">Sport & fritid</option>
+                        <option value="skønhed_frisør_wellness">Skønhed, frisør & wellness</option>
+                        <option value="sko_tasker">Sko & tasker</option>
+                        <option value="smykker_ure">Smykker & ure</option>
+                        <option value="tøj">Tøj</option>
+                        <option value="vin_delikatesse">Vin delikatesse</option>
+                        <option value="økonomi_bolig">Økonomi, bolig & rådgivning</option>
+                    </select>
+                </div>
+                <span id="advanced_search_button">Avanceret søgning</span>
+            </div>
+            <ul id="stores">
+                <li id="1" data-tag="hobby"><a href="stores/1"><img src="ffffff&text=Butik+billede.webp" alt="">
+                        <h2>1001 ting</h2>
+                    </a></li>
+                <li id="30" data-tag="dagligvarer"><a href="stores/30"><img src="ffffff&text=Butik+billede.webp" alt="">
+                        <h2>365 Discount</h2>
+                    </a></li>
+                <li id="14" data-tag="blomster"><a href="stores/14"><img src="ffffff&text=Butik+billede.webp" alt="">
+                        <h2>Bucketbloom</h2>
+                    </a></li>
+                <li id="9" data-tag="kaffe_chokolade"><a href="stores/9"><img src="ffffff&text=Butik+billede.webp" alt="">
+                        <h2>Butik Life</h2>
+                    </a></li>
+                <li id="2" data-tag="byggemarked"><a href="stores/2"><img src="ffffff&text=Butik+billede.webp" alt="">
+                        <h2>Bygma</h2>
+                    </a></li>
+                <li id="10" data-tag="kaffe_chokolade"><a href="stores/10"><img src="ffffff&text=Butik+billede.webp" alt="">
+                        <h2>Frellsen Chokolade</h2>
+                    </a></li>
+                <li id="25" data-tag="vin_delikatesse"><a href="stores/25"><img src="ffffff&text=Butik+billede.webp" alt="">
+                        <h2>Holte Vinlager</h2>
+                    </a></li>
+                <li id="27" data-tag="lingeri"><a href="stores/27"><img src="ffffff&text=Butik+billede.webp" alt="">
+                        <h2>Hunkemöller</h2>
+                    </a></li>
+                <li id="16" data-tag="sport_fritid"><a href="stores/16"><img src="ffffff&text=Butik+billede.webp" alt="">
+                        <h2>Intersport Seiffert</h2>
+                    </a></li>
+                <li id="24" data-tag="tøj"><a href="stores/24"><img src="ffffff&text=Butik+billede.webp" alt="">
+                        <h2>Kings & Queens</h2>
+                    </a></li>
+                <li id="7" data-tag="kaffe_chokolade"><a href="stores/7"><img src="ffffff&text=Butik+billede.webp" alt="">
+                        <h2>Kjærstrup Køge</h2>
+                    </a></li>
+                <li id="6" data-tag="medicin_alternativ"><a href="stores/6"><img src="ffffff&text=Butik+billede.webp" alt="">
+                        <h2>Køge Apotek</h2>
+                    </a></li>
+                <li id="4" data-tag="dyr"><a href="stores/4"><img src="ffffff&text=Butik+billede.webp" alt="">
+                        <h2>Køge Dyreklinik</h2>
+                    </a></li>
+                <li id="8" data-tag="kaffe_chokolade"><a href="stores/8"><img src="ffffff&text=Butik+billede.webp" alt="">
+                        <h2>Køge Kafferisteri</h2>
+                    </a></li>
+                <li id="23" data-tag="oplevelser"><a href="stores/23"><img src="ffffff&text=Butik+billede.webp" alt="">
+                        <h2>Køge Kirke</h2>
+                    </a></li>
+                <li id="15" data-tag="sport_fritid"><a href="stores/15"><img src="ffffff&text=Butik+billede.webp" alt="">
+                        <h2>Køges Kost Koncept</h2>
+                    </a></li>
+                <li id="21" data-tag="hotel_overnatning"><a href="stores/21"><img src="ffffff&text=Butik+billede.webp" alt="">
+                        <h2>Køge & Vallø Camping</h2>
+                    </a></li>
+                <li id="11" data-tag="tøj"><a href="stores/11"><img src="ffffff&text=Butik+billede.webp" alt="">
+                        <h2>Noa Noa</h2>
+                    </a></li>
+                <li id="22" data-tag="oplevelser"><a href="stores/22"><img src="ffffff&text=Butik+billede.webp" alt="">
+                        <h2>Nordisk Film</h2>
+                    </a></li>
+                <li id="18" data-tag="økonomi_bolig"><a href="stores/18"><img src="ffffff&text=Butik+billede.webp" alt="">
+                        <h2>Nybolig Køge</h2>
+                    </a></li>
+                <li id="13" data-tag="tøj"><a href="stores/13"><img src="ffffff&text=Butik+billede.webp" alt="">
+                        <h2>Only</h2>
+                    </a></li>
+                <li id="28" data-tag="smykker_ure"><a href="stores/28"><img src="ffffff&text=Butik+billede.webp" alt="">
+                        <h2>Pilgrim</h2>
+                    </a></li>
+                <li id="29" data-tag="smykker_ure"><a href="stores/29"><img src="ffffff&text=Butik+billede.webp" alt="">
+                        <h2>Pompus</h2>
+                    </a></li>
+                <li id="5" data-tag="medicin_alternativ"><a href="stores/5"><img src="ffffff&text=Butik+billede.webp" alt="">
+                        <h2>Rosmedic</h2>
+                    </a></li>
+                <li id="20" data-tag="sko_tasker"><a href="stores/20"><img src="ffffff&text=Butik+billede.webp" alt="">
+                        <h2>Skechers</h2>
+                    </a></li>
+                <li id="17" data-tag="økonomi_bolig"><a href="stores/17"><img src="ffffff&text=Butik+billede.webp" alt="">
+                        <h2>Sparekassen Kronjylland</h2>
+                    </a></li>
+                <li id="12" data-tag="tøj"><a href="stores/12"><img src="ffffff&text=Butik+billede.webp" alt="">
+                        <h2>Vila</h2>
+                    </a></li>
+                <li id="26" data-tag="vin_delikatesse"><a href="stores/26"><img src="ffffff&text=Butik+billede.webp" alt="">
+                        <h2>Vin-O</h2>
+                    </a></li>
+                <li id="3" data-tag="byggemarked"><a href="stores/3"><img src="ffffff&text=Butik+billede.webp" alt="">
+                        <h2>XL-Byg CF</h2>
+                    </a></li>
+                <li id="19" data-tag="skønhed_frisør_wellness"><a href="stores/19"><img src="ffffff&text=Butik+billede.webp"
+                            alt="">
+                        <h2>Your Wellness</h2>
+                    </a></li>
+            </ul>
+            <span id="no_results">Vi kunne desværre ikke finde nogen butikker med de søge kriterier, som du har
+                valgt</span>
+        </form>
+    </main>
 </body>
 
 </html>
