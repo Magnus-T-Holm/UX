@@ -22,6 +22,6 @@ $(document).ready(function () {
     }
 
     function toggleAdvancedSearch() {
-        $("#advanced_search").toggle();
+        $(".advanced_search").toggleClass("advanced_search_show");
     }
 })
