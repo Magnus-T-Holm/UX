@@ -89,7 +89,7 @@ form {
 
 #advanced_search_button_container hr {
     width: 40%;
-    height: 1px;
+    height: 0px;
 }
 
 #advanced_search_button {
@@ -211,8 +211,29 @@ form {
 }
 
 /* ----------------- Media querys ----------------- */
+@media screen and (max-width: 768px) {
+    #store_info_container div {
+        width: 100%;
+    }
+
+    #store_info_container div {
+        margin-bottom: 17px;
+    }
+
+    #store_info_container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+}
+
 @media screen and (max-width: 425px) {
     header img {
         width: 100%;
+    }
+
+    #store_buttons a {
+        padding: 10px 10px;
     }
 }
